@@ -1,3 +1,10 @@
+-- DROP
+
+DROP TABLE message;
+DROP TABLE user;
+DROP TABLE skill;
+
+-- CREATE
 
 CREATE TABLE skill (
 id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -10,7 +17,7 @@ CREATE TABLE user (
 id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nickname varchar(255) NOT NULL UNIQUE,
 lastname varchar(255) NOT NULL,
-firtname varchar(255) NOT NULL,
+firstname varchar(255) NOT NULL,
 email varchar(255) NOT NULL UNIQUE,
 password varchar(255) NOT NULL,
 city varchar(255),
@@ -31,6 +38,58 @@ CONSTRAINT fk_message_user
     FOREIGN KEY (user_id) 
     REFERENCES user(id)
 );
+
+-- INTO
+
+INSERT INTO
+    skill (name, type)
+VALUES
+    (
+        "React",
+        "Library"
+    ),
+    (
+        "JavaScript",
+        "Language"
+    ),
+    (
+        "PHP",
+        "Language"
+    );
+
+INSERT INTO
+    user (nickname, lastname, firstname, email, password, city, experience, description)
+VALUES
+    (
+        "gentleman-cambrioleur",
+        "Lupin",
+        "Arsene",
+        "adress.bidon@gmail.com",
+        "azerty",
+        "Paris",
+        "10 ans",
+        "Blablabla blabla blablabla blablabla"
+    ),
+    (
+        "The Detective",
+        "Holmes",
+        "Sherlock",
+        "backerstreet@gmail.com",
+        "azerty",
+        "Londres",
+        "15 ans",
+        "Blablabla blabla blablabla blablabla"
+    ),
+    (
+        "The Doctor",
+        "Watson",
+        "John",
+        "121BbackerStreet@gmail.com",
+        "azerty",
+        "Londres",
+        "20 ans",
+        "Blablabla blabla blablabla blablabla"
+    );
 
 
 
