@@ -1,5 +1,6 @@
 -- DROP
 
+DROP TABLE user_skill;
 DROP TABLE message;
 DROP TABLE user;
 DROP TABLE skill;
@@ -22,11 +23,7 @@ email varchar(255) NOT NULL UNIQUE,
 password varchar(255) NOT NULL,
 city varchar(255),
 experience varchar(255),
-description varchar(255),
-skill_id INT,
-CONSTRAINT fk_user_skill 
-    FOREIGN KEY (skill_id) 
-    REFERENCES skill(id)
+description varchar(255)
 );
 
 
@@ -38,6 +35,16 @@ CONSTRAINT fk_message_user
     FOREIGN KEY (user_id) 
     REFERENCES user(id)
 );
+
+CREATE TABLE user_skill (
+    id INT,
+    user_id INT,
+    skill_id INT
+
+);
+
+-- SELECT * FROM user
+-- LEFT JOIN skill ON user.id = skill.fk_id;
 
 -- INTO
 
@@ -91,6 +98,16 @@ VALUES
         "Blablabla blabla blablabla blablabla"
     );
 
+INSERT INTO 
+    user_skill (user_id, skill_id)
+VALUE (
+    1,
+    1
+    ),
+    (
+    2,
+    3
+    );
 
 
 
