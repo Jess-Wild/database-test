@@ -1,17 +1,17 @@
 
 CREATE TABLE skill (
 id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-name varchar(255) NOT NULL,
+name varchar(255) NOT NULL UNIQUE,
 type varchar(255) NOT NULL
 );
 
 
 CREATE TABLE user (
 id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
-nickname varchar(255) NOT NULL,
+nickname varchar(255) NOT NULL UNIQUE,
 lastname varchar(255) NOT NULL,
 firtname varchar(255) NOT NULL,
-email varchar(255) NOT NULL,
+email varchar(255) NOT NULL UNIQUE,
 password varchar(255) NOT NULL,
 city varchar(255),
 experience varchar(255),
