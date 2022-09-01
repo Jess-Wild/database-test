@@ -5,6 +5,7 @@ DROP TABLE message;
 DROP TABLE user;
 DROP TABLE skill;
 
+
 -- CREATE
 
 CREATE TABLE skill (
@@ -42,6 +43,7 @@ CREATE TABLE user_skill (
     skill_id INT
 
 );
+
 
 -- SELECT * FROM user
 -- LEFT JOIN skill ON user.id = skill.fk_id;
@@ -107,9 +109,18 @@ VALUE (
     (
     2,
     3
+    ),
+    (
+        1,
+        2
     );
 
-
+INSERT INTO 
+    message (text, user_id)
+    VALUE (
+    "test",
+    1
+    );
 
 
 

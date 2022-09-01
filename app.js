@@ -12,8 +12,10 @@ const welcome = (req, res) => {
 app.get("/", welcome);
 
 const userHandlers = require("./userHandlers");
+const skillHandlers = require("./skillHandlers");
 
 app.get("/users", userHandlers.getUser);
+app.get("/users/skill", skillHandlers.getSkill);
 
 app.listen(port, (err) => {
   if (err) {
