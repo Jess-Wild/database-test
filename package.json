@@ -1,8 +1,7 @@
 {
   "name": "express-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
@@ -20,5 +19,14 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jess-Wild/database-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Jess-Wild/database-test/issues"
+  },
+  "homepage": "https://github.com/Jess-Wild/database-test#readme",
+  "description": ""
 }
