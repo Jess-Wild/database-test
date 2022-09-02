@@ -111,18 +111,8 @@ VALUE (
     3
     ),
     (
-        1,
-        2
-<<<<<<< HEAD
-    );
-
-INSERT INTO 
-    message (text, user_id)
-    VALUE (
-    "test",
-    1
-    );
-=======
+    1,
+    2
     );
 
 INSERT INTO 
@@ -132,6 +122,9 @@ INSERT INTO
     1
     );
 
-
-
->>>>>>> 0417861a74c0d9d68304cdf872eea8f1a8868a13
+INSERT INTO 
+    message (text, user_id)
+    VALUE (
+    "test",
+    1
+    );
