@@ -1,9 +1,9 @@
 -- DROP
 
-DROP TABLE user_skill;
-DROP TABLE message;
-DROP TABLE user;
-DROP TABLE skill;
+DROP TABLE IF EXISTS user_skill;
+DROP TABLE IF EXISTS message;
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS skill;
 
 
 -- CREATE
@@ -38,7 +38,7 @@ CONSTRAINT fk_message_user
 );
 
 CREATE TABLE user_skill (
-    id INT,
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     user_id INT,
     skill_id INT
 
@@ -120,11 +120,8 @@ INSERT INTO
     VALUE (
     "test",
     1
-    );
-
-INSERT INTO 
-    message (text, user_id)
-    VALUE (
-    "test",
+    ),
+    (
+    "Blabla",
     1
     );
